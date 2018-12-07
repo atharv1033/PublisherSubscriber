@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.developer.rv.publishersubscriber">
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".Activities.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Activities.PublisherActivity"
+            android:label="@string/title_activity_publisher"
+            android:parentActivityName=".Activities.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.developer.rv.publishersubscriber.Activities.MainActivity" />
+        </activity>
+        <activity
+            android:name=".Activities.SubscriberActivity"
+            android:label="@string/title_activity_subscriber"
+            android:parentActivityName=".Activities.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.developer.rv.publishersubscriber.Activities.MainActivity" />
+        </activity>
+        <activity
+            android:name=".Activities.CreateChannelActivity"
+            android:label="@string/title_activity_create_channel" />
+        <activity
+            android:name=".Activities.SearchChannelActivity"
+            android:label="@string/title_activity_join_channel" />
+        <activity
+            android:name=".Activities.PublisherChannelActivity"
+            android:label="Publisher - My Posts" />
+        <activity android:name=".Activities.PublisherPostActivity" />
+        <activity
+            android:name=".Activities.CreatePostActivity"
+            android:label="Create Post" />
+        <activity android:name=".Activities.SubscribeChannelActivity" />
+        <activity android:name=".Activities.SubscriberChannelActivity" />
+        <activity android:name=".Activities.SubscriberPostActivity"></activity>
+    </application>
+
+</manifest>
